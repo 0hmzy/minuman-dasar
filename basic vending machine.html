@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesin penjual minuman</title>
+  <!-- bagian tampilan dari menu -->  
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            background: aquamarine;
+        }
+        p{
+            color: red;
+        }
+        button{
+            border-radius: 50%;
+        }
+    </style>
+ <!-- bagian fungsi untuk interaksi dengan pengguna-->   
+    <script>
+        var money=0;
+        function insertMoney(){
+            money=money+5000;
+            alert(money+'uang dimasukkan')
+        }
+        function buyDrink(){
+            if(money<5000){
+                alert("uangnya kurang");
+            }else{
+                money=money-5000;
+                alert('minuman sudah terbeli');
+            }
+        }
+    </script>
+</head>
+<!-- pesan yang ditampilkan-->
+<body>
+    <div>
+        <h1>Mesin penjual minuman</h1>
+        <p>masukkan uangnya dibawah sini<br>Harganya 5000</p>
+        <button onclick="buyDrink()">beli minuman</button>
+        <button onclick="insertMoney()">masukkan uang </button>
+    </div>
+</body>
+</html>
